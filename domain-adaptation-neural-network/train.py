@@ -1,3 +1,11 @@
+'''
+Playing around with a negative-gradient based anti domain-adaptation
+architecture, following
+
+Ganin, Yaroslav, and Victor Lempitsky. "Unsupervised domain adaptation by
+backpropagation." International Conference on Machine Learning. 2015
+'''
+
 import click
 from keras.callbacks import ReduceLROnPlateau as LRC
 from keras.callbacks import EarlyStopping, Callback

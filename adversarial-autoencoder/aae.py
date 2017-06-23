@@ -1,3 +1,10 @@
+'''
+Playing around with an adversarial autoencoder, as in 
+
+Makhzani, Alireza, et al. "Adversarial autoencoders." arXiv preprint
+arXiv:1511.05644 (2015).
+'''
+
 import os
 
 import keras.callbacks as kcb
@@ -19,7 +26,7 @@ import numpy as np
 import numpy.random as npr
 
 import qqq.util as qqu
-import qqq.qio as qio
+import qqq.io as qio
 
 
 batch_size = 128
@@ -152,6 +159,7 @@ metadata = dict(title='Autism Production Presents: Walts of the zs',
 writer = FFMpegWriter(fps=30, metadata=metadata)
 fig = plt.figure()
 ax = fig.add_subplot(111)
+
 with writer.saving(fig, dirname+"/double_pinned_6D_xxxtralow_lr_waltz_of_the_zs.mp4", 100):
     for e in range(10000):
         true_ys[:, 0] = 1
